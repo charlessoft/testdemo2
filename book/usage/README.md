@@ -6,7 +6,7 @@ gitbook服务架设在10.142.55.177(内网环境)
 
 1. 下载basin-content
 ~~~
-git clone ssh://git@115.28.208.122:10022/basin/basin-content.git
+git clone ssh://git@115.28.208.122:10022/basin/basin-gitbook.git
 ~~~
 
 2. 以book目录作为根目录,在该目录下编辑内容
