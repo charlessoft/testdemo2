@@ -31,7 +31,6 @@
 
 ### 接口1：查询网页数据条数
 
-- Name:count
 - URL:/count/(project)
 - Type:JSON
 - HTTP Method:GET
@@ -39,7 +38,7 @@
 
     |name | required | type and range | info |
     | --- | ---- | --- | --- |
-    | project | true | string | 参见"服务说明" |
+    | project | true | string | 参见"服务说明"，一次只能指定一个project name |
     | start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
     | end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
     | hostname | false | string | 网页对应站点的hostname，如"sina.com" |
@@ -48,12 +47,16 @@
 
     curl http://139.196.189.136:7777/count/baidu_tieba
 
+- Result:
+
+    符合查询条件的记录条数
+
 - Result Example:
 
         {'count': 100 }
 
 
-### 获取网页数据
+### 接口2：获取网页数据
 
 - URL:/results/(project).(_format)
 - Type:JSON/CSV
@@ -75,7 +78,7 @@
 
     curl http://139.196.189.136:7777/results/baidu_tieba.json?limit=10
 
-- 返回结果:
+- Result:
 
     包含一系列符合查询条件的记录集，具体包括：
 
@@ -86,8 +89,8 @@
     - publish_time，数据所属站点提供的内容发布时间，如果没有获得，则值记为0
     - url，网页地址
 
+- Result example:
 
-    返回结果示例：
 
         [
             {
