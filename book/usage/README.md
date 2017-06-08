@@ -2,7 +2,7 @@
 
 gitbook服务架设在10.142.55.177(内网环境)
 
-## 使用方式
+## basin-gitbook 使用方式
 
 1. 下载basin-content
 ~~~
