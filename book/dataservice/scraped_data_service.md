@@ -36,12 +36,12 @@
 - HTTP Method:GET
 - Parameters:
 
-    |name | required | type and range | info |
-    | --- | ---- | --- | --- |
-    | project | true | string | 参见"服务说明"，一次只能指定一个project name |
-    | start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
-    | end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
-    | hostname | false | string | 网页对应站点的hostname，如"sina.com" |
+|name | required | type and range | info |
+| --- | ---- | --- | --- |
+| project | true | string | 参见"服务说明"，一次只能指定一个project name |
+| start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
+| end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
+| hostname | false | string | 网页对应站点的hostname，如"sina.com" |
 
 - Request URL Example:
 
@@ -63,15 +63,15 @@
 - HTTP Method:GET
 - Parameters:
 
-    |name | required | type and range | info |
-    | --- | ---- | --- | --- |
-    | project | true | string | 项目名称(mongo resultdb 中的collection名) |
-    | _format | true | ['json', 'csv']  | 输出格式 |
-    | start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
-    | end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
-    | offset | false | int | 起始位置（跳过前多少条数据） |
-    | limit | false | int | 限制返回个数（与offset 组合使用构成分页） |
-    | hostname | false | string | 网页对应站点的hostname，如"sina.com" |
+|name | required | type and range | info |
+| --- | ---- | --- | --- |
+| project | true | string | 项目名称(mongo resultdb 中的collection名) |
+| _format | true | ['json', 'csv']  | 输出格式 |
+| start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
+| end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
+| offset | false | int | 起始位置（跳过前多少条数据） |
+| limit | false | int | 限制返回个数（与offset 组合使用构成分页） |
+| hostname | false | string | 网页对应站点的hostname，如"sina.com" |
 
 
 - Request URL Example:
