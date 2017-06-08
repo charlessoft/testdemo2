@@ -4,7 +4,7 @@ gitbook服务架设在10.142.55.177(内网环境)
 
 ## basin-gitbook 使用方式
 
-1. 下载basin-content
+1. 下载basin-gitbook
 ~~~
 git clone ssh://git@115.28.208.122:10022/basin/basin-gitbook.git
 ~~~
