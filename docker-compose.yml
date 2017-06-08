@@ -1,0 +1,20 @@
+version: '2'
+services:
+  gitbook:
+    image: gitbook
+    volumes:
+      - ${PWD}/book:/gitbook
+    ports:
+      - 4000:4000
+  #update_basin_content:
+    #image: gitbook
+    #volumes:
+      #- ${PWD}/book:/gitbook 
+    #environment:
+        #ischeck: 1
+        ##gituser: gitlab 
+        ##gitpwd: gitlab
+        #interval: 60
+    #command:
+        #sh ./tools/pull.sh
+
