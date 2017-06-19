@@ -2,7 +2,7 @@
 
 维护人：陈予言
 
-更新时间：2017-6-8
+更新时间：2017-6-19
 
 ## 服务说明
 
@@ -45,7 +45,14 @@
 
 - Request URL Example:
 
-    curl http://139.196.189.136:7777/count/baidu_tieba
+    params：
+        project: sougou_weixin
+        start: 2017-04-10 00:00:00
+        end: 2017-05-10 00:00:00
+        hostname: weixin
+
+    curl http://139.196.189.136:7777/count/sougou_weixin?start=2017-04-10+00%3A00%3A00&hostname=weixin&end=2017-06-20+00%3A00%3A00
+
 
 - Result:
 
@@ -56,7 +63,45 @@
         {'count': 100 }
 
 
-### 接口2：获取网页数据
+### 接口2：时间范围获取接口
+
+http://localhost:7777/daterange/sougou_weixin
+
+- URL:/daterange/(project)
+- Type:JSON
+- HTTP Method:GET
+- Parameters:
+
+|name | required | type and range | info |
+| --- | ---- | --- | --- |
+| project | true | string | 参见"服务说明"，一次只能指定一个project name |
+
+
+- Request URL Example:
+
+    params：
+        project: sougou_weixin
+
+    curl http://139.196.189.136:7777/daterange/sougou_weixin
+
+
+- Result Example:
+
+        {
+            end: "2017-06-19 16:06:38",
+            start: "2017-05-03 09:30:11"
+        }
+
+
+- note:
+
+    因为要通过sort才能得到最大最小时间，mongodb 默认搜索内存大小为32M，大部分collection sort都会出错，需要添加index来解决。
+    然而由于权限问题，通过python代码增加无法创建index。但同样的账号在mongodb客户端上可以创建index，比较费解。
+    所以如果新加了collection必须记得创建index，否则会出错。现在暂时找不到解决方法，先记录一下。
+
+
+
+### 接口3：获取网页数据
 
 - URL:/results/(project).(_format)
 - Type:JSON/CSV
@@ -76,7 +121,17 @@
 
 - Request URL Example:
 
-    curl http://139.196.189.136:7777/results/baidu_tieba.json?limit=10
+    params：
+        project: sougou_weixin
+        _format: json
+        start: 2017-04-10 00:00:00
+        end: 2017-05-10 00:00:00
+        hostname: weixin
+        offset: 0
+        limit: 10
+
+    curl http://139.196.189.136:7777/results/sougou_weixin.json?start=2017-04-10+00%3A00%3A00&hostname=weixin&end=2017-06-20+00%3A00%3A00&limit=10&offset=0
+
 
 - Result:
 
