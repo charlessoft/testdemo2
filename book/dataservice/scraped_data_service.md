@@ -65,8 +65,6 @@
 
 ### 接口2：时间范围获取接口
 
-http://localhost:7777/daterange/sougou_weixin
-
 - URL:/daterange/(project)
 - Type:JSON
 - HTTP Method:GET
