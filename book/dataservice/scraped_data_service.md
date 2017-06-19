@@ -83,6 +83,10 @@
     curl http://139.196.189.136:7777/daterange/sougou_weixin
 
 
+- Result
+
+    对应project的update_time的时间范围
+
 - Result Example:
 
         {
@@ -110,8 +114,8 @@
 | --- | ---- | --- | --- |
 | project | true | string | 项目名称(mongo resultdb 中的collection名) |
 | _format | true | ['json', 'csv']  | 输出格式 |
-| start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间 |
-| end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间 |
+| start | false | string(yyyy-mm-dd HH:MM:SS) | 开始时间(update_time) |
+| end | false | string(yyyy-mm-dd HH:MM:SS) | 结束时间(update_time) |
 | offset | false | int | 起始位置（跳过前多少条数据） |
 | limit | false | int | 限制返回个数（与offset 组合使用构成分页） |
 | hostname | false | string | 网页对应站点的hostname，如"sina.com" |
