@@ -23,18 +23,14 @@ basin-spdier和pyspider docker镜像发布与115.28.208.122上.
 2. 解压进入basin-spider目录,修改配置
     修改ip地址,如下所示,如果是本机运行.可以修改127.0.0.1
     ![PNG](./images/spider_deploy_01.jpg)
-
-
 3. 执行启动爬虫服务,默认启动 redis, mongo, pyspider, basin-spider
     >docker-compose up -d
-
 4. 导入spider app工程,当前支持4个招标网站采集app,(南网,国网,政府招标,安徽招标)
 
     ~~~
     mongorestore --host 127.0.0.1 --port 11081 --db spider ${PWD}/db/spider/spider
     ~~~
 5. 启动指定spider app爬虫任务.以安徽招标为例,
-
 
     ~~~
     python 脚本:
