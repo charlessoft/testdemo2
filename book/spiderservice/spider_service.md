@@ -39,7 +39,7 @@ basin 爬虫文档 api
 ## Paths
 
 <a name="spiderapps-post"></a>
-### 新增爬虫app
+### <font color="red">新增爬虫app</font>
 ```
 POST /spiderapps
 ```
@@ -80,7 +80,7 @@ POST /spiderapps
 
 
 <a name="getspiderapps"></a>
-### 获取爬虫app列表(支持分页查询)
+### <font color="red">获取爬虫app列表(支持分页查询)</font>
 ```
 GET /spiderapps
 ```
