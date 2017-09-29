@@ -39,7 +39,7 @@ basin 爬虫文档 api
 ## Paths
 
 <a name="spiderapps-post"></a>
-### <font color=red> <font color=red> 新增爬虫app</font></font>
+### <font color=red> 新增爬虫app</font>
 ```
 POST /spiderapps
 ```
@@ -260,7 +260,7 @@ POST /sys/types
 
 
 <a name="getspidertypes"></a>
-### <font color=red> <font color=red> 获取类型配置(spider app接口包含类型了)</font></font>
+### <font color=red> 获取类型配置(spider app接口包含类型了)</font>
 ```
 GET /sys/types
 ```
