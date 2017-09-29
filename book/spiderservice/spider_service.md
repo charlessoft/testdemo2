@@ -39,7 +39,7 @@ basin 爬虫文档 api
 ## Paths
 
 <a name="spiderapps-post"></a>
-<font color="red">### 新增爬虫app</font>
+### <font color=red> <font color=red> 新增爬虫app</font></font>
 ```
 POST /spiderapps
 ```
@@ -80,7 +80,7 @@ POST /spiderapps
 
 
 <a name="getspiderapps"></a>
-### <font color="red">获取爬虫app列表(支持分页查询)</font>
+### <font color=red> 获取爬虫app列表(支持分页查询)</font>
 ```
 GET /spiderapps
 ```
@@ -157,7 +157,7 @@ GET /spiderapps/{spiderapp}
 
 
 <a name="updatespider"></a>
-### 更新已存在的spider app
+### <font color=red> 更新已存在的spider app</font>
 ```
 PUT /spiderapps/{spiderapp}
 ```
@@ -194,7 +194,7 @@ PUT /spiderapps/{spiderapp}
 
 
 <a name="spiderapps-spiderapp-delete"></a>
-### 删除指定的spider app
+### <font color=red> 删除指定的spider app</font>
 ```
 DELETE /spiderapps/{spiderapp}
 ```
@@ -225,7 +225,7 @@ DELETE /spiderapps/{spiderapp}
 
 
 <a name="createspidertype"></a>
-### 创建类型
+### <font color=red> 创建类型</font>
 ```
 POST /sys/types
 ```
@@ -260,7 +260,7 @@ POST /sys/types
 
 
 <a name="getspidertypes"></a>
-### 获取类型配置(spider app接口包含类型了)
+### <font color=red> <font color=red> 获取类型配置(spider app接口包含类型了)</font></font>
 ```
 GET /sys/types
 ```
@@ -291,7 +291,7 @@ operation.deprecated
 
 
 <a name="deletespiderbytypeid"></a>
-### 删除指定类型配置
+### <font color=red> 删除指定类型配置</font>
 ```
 DELETE /sys/types/{typeid}
 ```
@@ -328,7 +328,7 @@ DELETE /sys/types/{typeid}
 
 
 <a name="tasks-post"></a>
-### 创建一个新任务
+### <font color=red> 创建一个新任务</font>
 ```
 POST /tasks
 ```
@@ -369,7 +369,7 @@ createNewTask
 
 
 <a name="getalltasks"></a>
-### 获取所有任务列表
+### <font color=red> 获取所有任务列表</font>
 ```
 GET /tasks
 ```
@@ -397,7 +397,7 @@ GET /tasks
 
 
 <a name="updateconfingtask"></a>
-### 配置采集任务
+### <font color=red> 配置采集任务</font>
 ```
 PUT /tasks/config/{taskid}
 ```
@@ -435,7 +435,7 @@ PUT /tasks/config/{taskid}
 
 
 <a name="gettasklog"></a>
-### 获取任务采集日志(支持分页查询)
+### <font color=red> 获取任务采集日志(支持分页查询)</font>
 ```
 GET /tasks/log/{taskid}
 ```
@@ -475,7 +475,7 @@ GET /tasks/log/{taskid}
 
 
 <a name="gettaskresult"></a>
-### 获取任务采集日志(支持分页查询)
+### <font color=red> 获取任务采集日志(支持分页查询)</font>
 ```
 GET /tasks/result/{taskid}
 ```
@@ -515,7 +515,7 @@ GET /tasks/result/{taskid}
 
 
 <a name="webhooktaskid"></a>
-### webhook,用于集成第三方采集回调数据
+### <font color=red> webhook,用于集成第三方采集回调数据</font>
 ```
 POST /tasks/{taskid}
 ```
@@ -553,7 +553,7 @@ POST /tasks/{taskid}
 
 
 <a name="gettasktaskid"></a>
-### 获取任务信息/状态/采集量
+### <font color=red> 获取任务信息/状态/采集量</font>
 ```
 GET /tasks/{taskid}
 ```
@@ -590,7 +590,7 @@ GET /tasks/{taskid}
 
 
 <a name="updatetaskid"></a>
-### 更新任务(启动/停止)任务
+### <font color=red> 更新任务(启动/停止)任务</font>
 ```
 PUT /tasks/{taskid}
 ```
@@ -628,7 +628,7 @@ PUT /tasks/{taskid}
 
 
 <a name="deletebytaskid"></a>
-### 删除指定任务
+### <font color=red> 删除指定任务</font>
 ```
 DELETE /tasks/{taskid}
 ```
