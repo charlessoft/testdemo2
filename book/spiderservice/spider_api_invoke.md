@@ -17,7 +17,7 @@ r = requests.get(url + path)
 print r.json()
 ~~~
 
-#### 返回示例
+#### 返回示例:
 ~~~
 [{"createtime": "2017-07-11",
   "description": "南网爬虫app..",
