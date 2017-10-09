@@ -1,0 +1,50 @@
+{
+  "title": "平台业务部服务（产品）发布平台",
+  "description": "平台业务部服务（产品）发布平台",
+  "language": "zh",
+  "plugins": [
+    "-disqus",
+    "-github",
+    "-editlink",
+    "-search",
+    "search-pro",
+    "prism",
+    "prism-themes",
+    "-highlight",
+    "baidu",
+    "splitter",
+    "sitemap",
+    "chart",
+    "-styles-sass",
+    "-styles-less",
+    "atoc",
+    "ace",
+    "emphasize",
+    "tbfed-pagefooter",
+    "sectionx"
+
+	
+  ],
+  "pluginsConfig": {
+    "baidu": {
+        "token": "a9787f0ab45d5e237bab522431d0a7ec"
+    },
+    "sitemap": {
+        "hostname": "http://zhaoda.net/"
+    },
+    "prism": {
+    "css": [
+      "prismjs/themes/prism-tomorrow.css"
+    ]
+    },
+    "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord" : ["Gitbook Use"]
+    },
+   "tbfed-pagefooter": {
+        "copyright":"Copyright &copy basin 2017",
+        "modify_label": "该文件修订时间：",
+        "modify_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  }
+}
