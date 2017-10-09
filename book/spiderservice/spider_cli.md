@@ -6,18 +6,18 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
 地址: http://115.28.208.122:88/basin-spider/basin-spider-1.1.tar.gz
 2. 安装方式
 
-    ~~~
+~~~
     cd spidercli
     pip install -r requirements.txt
     python setup.py install
-    ~~~
+~~~
 
 3. 使用帮助
     
-    ~~~
+~~~
     spidercli --help
-    ~~~
-3. 获取spider app
+~~~
+4. 获取spider app
 
     ~~~
     spidercli --url=http://10.211.55.2:5001 getallspiderapp
@@ -39,7 +39,7 @@ http://10.211.55.2:5001/api/v1
 ~~~
 
 
-4. 创建爬虫任务
+5. 创建爬虫任务
 
 ~~~
 spidercli --url=http://10.211.55.2:5001 startspidertask  news_baidu news_baidu_demo  '["程序员的一天","helloworld"]' --type=search
@@ -55,7 +55,7 @@ spidercli --url=http://10.211.55.2:5001 startspidertask  news_baidu news_baidu_d
 +---------+--------------+-----------------+
 ~~~
 
-5. 获取爬虫任务采集结果
+6. 获取爬虫任务采集结果
 
 ~~~
 spidercli --url=http://10.211.55.2:5001  getspiderresult news_baidu_demo
@@ -78,7 +78,7 @@ WARNING: 采集结果在字段reult,内容太长,不打印,具体采集结果.�
 |            http://www.eepw.com.cn/article/201610/305446.htm            | 1507529328.95 | 59db12701c0dca361285a238 | 03183189d64aee315b9a976a678fca41 |
 ~~~
 
-6. 停止爬虫任务
+7. 停止爬虫任务
 
 ~~~
 spidercli --url=http://10.211.55.2:5001  updatetaskstatus news_baidu_demo --status=stop
