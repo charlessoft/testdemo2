@@ -31,6 +31,7 @@ basin-spdier和pyspider docker镜像发布与115.28.208.122上.
 4. 导入spider app工程,当前支持4个招标网站采集app,(南网,国网,政府招标,安徽招标)
 
     ~~~
+    cd package/basin-spider;
     !!需要指定目标 mongodb 地址和port
      docker run --rm \
                 -v ${PWD}/db/spider/spider:/tmp/db/spider/spider \
