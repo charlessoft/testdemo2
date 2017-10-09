@@ -19,9 +19,9 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
 ~~~
 4. 获取spider app
 
-    ~~~
+~~~
     spidercli --url=http://10.211.55.2:5001 getallspiderapp
-    ~~~
+~~~
 
 返回结果:
 
