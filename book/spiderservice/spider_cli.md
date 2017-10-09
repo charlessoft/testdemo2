@@ -23,7 +23,7 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
     >Main entry point for SpiderCli.
 
     >Options:
-        >--url TEXT  spider api url
+        >--url TEXT  spider api url  
         >--help      Show this message and exit.
 
     >Commands:
