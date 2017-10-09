@@ -19,6 +19,7 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
     ~~~
 
     >Usage: spidercli [OPTIONS] COMMAND [ARGS]...
+
     >Main entry point for SpiderCli.
 
     >Options:
@@ -26,12 +27,12 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
         >--help      Show this message and exit.
 
     >Commands:
-      getallspiderapp      获取所有spider app.
-      getalltasks          获取爬虫全部任务.
-      getspiderresult      获取爬虫采集结果.
-      getspidertaskstatus  获取爬虫任务状态.
-      runspidertask        启动爬虫任务.
-      updatetaskstatus     启停爬虫任务.
+      getallspiderapp      获取所有spider app.  
+      getalltasks          获取爬虫全部任务.  
+      getspiderresult      获取爬虫采集结果.  
+      getspidertaskstatus  获取爬虫任务状态.  
+      runspidertask        启动爬虫任务.   
+      updatetaskstatus     启停爬虫任务.   
 
 4. 获取spider app
 
