@@ -3,7 +3,7 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
 
 ## 安装部署
 1. 下载源码
-地址: http://115.28.208.122:88/basin-spider/basin-spider-1.1.tar.gz
+地址: http://115.28.208.122:88/basin-spider/basin-spider-toolkit.tar.gz
 2. 安装方式
 
     ~~~
