@@ -22,8 +22,7 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
     ~~~
     spidercli --url=http://10.211.55.2:5001 getallspiderapp
     ~~~
-
-返回结果:
+    返回结果:
 
     ~~~
     http://10.211.55.2:5001/api/v1
@@ -38,14 +37,12 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
     +---------------+--------------+---------------+------------+---------------+
     ~~~
 
-
 5. 创建爬虫任务
 
     ~~~
     spidercli --url=http://10.211.55.2:5001 startspidertask  news_baidu news_baidu_demo  '["程序员的一天","helloworld"]' --type=search
     ~~~
-
-返回结果:
+    返回结果:
 
     ~~~
     +---------+--------------+-----------------+
