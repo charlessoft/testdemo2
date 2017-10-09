@@ -1,5 +1,5 @@
 # Basin spider
-[toc]
+
 
 <a name="overview"></a>
 ## Overview
@@ -39,7 +39,7 @@ basin 爬虫文档 api
 ## Paths
 
 <a name="spiderapps-post"></a>
-### <font color=red> 新增爬虫app</font>
+### 新增爬虫app
 ```
 POST /spiderapps
 ```
@@ -80,7 +80,7 @@ POST /spiderapps
 
 
 <a name="getspiderapps"></a>
-### <font color=red> 获取爬虫app列表(支持分页查询)</font>
+### 获取爬虫app列表(支持分页查询)
 ```
 GET /spiderapps
 ```
@@ -96,10 +96,6 @@ GET /spiderapps
 |---|---|---|---|
 |**Query**|**limit**  <br>*optional*|取多少条|integer (int32)|
 |**Query**|**offset**  <br>*optional*|偏移量|integer (int32)|
-|**Query**|**order_by**  <br>*optional*|排序,默认是降序desc，asc升序|string (string)|
-|**Query**|**search**  <br>*optional*|模糊查询|string (string)|
-|**Query**|**sort_by**  <br>*optional*|根据字段进行排序|string (string)|
-|**Query**|**spidername**  <br>*optional*|依据spidername查询爬虫|string (string)|
 
 
 #### Responses
@@ -121,28 +117,28 @@ GET /spiderapps
 
 
 <a name="getspider"></a>
-### 更新已存在的spider app
+### 获取已存在的spider app
 ```
-GET /spiderapps/{spiderapp}
+GET /spiderapps/{name}
 ```
 
 
 #### Description
-更新已存在的spider app
+获取已存在的spider app
 
 
 #### Parameters
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**spiderapp**  <br>*required*|爬虫名称|string (string)|
+|**Path**|**name**  <br>*required*|爬虫名称|string (string)|
 
 
 #### Responses
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|OK|No Content|
+|**200**|OK|[SpiderApp](#spiderapp)|
 |**400**|Invalid input|No Content|
 
 
@@ -157,9 +153,9 @@ GET /spiderapps/{spiderapp}
 
 
 <a name="updatespider"></a>
-### <font color=red> 更新已存在的spider app</font>
+### 更新已存在的spider app
 ```
-PUT /spiderapps/{spiderapp}
+PUT /spiderapps/{name}
 ```
 
 
@@ -171,7 +167,7 @@ PUT /spiderapps/{spiderapp}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**spiderapp**  <br>*required*|爬虫名称|string (string)|
+|**Path**|**name**  <br>*required*|爬虫名称|string (string)|
 |**Body**|**body**  <br>*required*|更新指定spider-app对象|[SpiderApp](#spiderapp)|
 
 
@@ -193,10 +189,10 @@ PUT /spiderapps/{spiderapp}
 * spiderapps
 
 
-<a name="spiderapps-spiderapp-delete"></a>
-### <font color=red> 删除指定的spider app</font>
+<a name="spiderapps-name-delete"></a>
+### 删除指定的spider app
 ```
-DELETE /spiderapps/{spiderapp}
+DELETE /spiderapps/{name}
 ```
 
 
@@ -208,7 +204,7 @@ DELETE /spiderapps/{spiderapp}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**spiderapp**  <br>*required*|爬虫名称|string (string)|
+|**Path**|**name**  <br>*required*|爬虫名称|string (string)|
 
 
 #### Responses
@@ -225,7 +221,7 @@ DELETE /spiderapps/{spiderapp}
 
 
 <a name="createspidertype"></a>
-### <font color=red> 创建类型</font>
+### 创建类型
 ```
 POST /sys/types
 ```
@@ -260,7 +256,7 @@ POST /sys/types
 
 
 <a name="getspidertypes"></a>
-### <font color=red> 获取类型配置(spider app接口包含类型了)</font>
+### 获取类型配置(spider app接口包含类型了)
 ```
 GET /sys/types
 ```
@@ -291,7 +287,7 @@ operation.deprecated
 
 
 <a name="deletespiderbytypeid"></a>
-### <font color=red> 删除指定类型配置</font>
+### 删除指定类型配置
 ```
 DELETE /sys/types/{typeid}
 ```
@@ -328,7 +324,7 @@ DELETE /sys/types/{typeid}
 
 
 <a name="tasks-post"></a>
-### <font color=red> 创建一个新任务</font>
+### 创建一个新任务
 ```
 POST /tasks
 ```
@@ -342,7 +338,7 @@ createNewTask
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Body**|**body**  <br>*required*|spiderapp object that needs to be added to spiderapps|[SpiderApp](#spiderapp)|
+|**Body**|**body**  <br>*required*|spiderapp object that needs to be added to spiderapps|[TaskInfo](#taskinfo)|
 
 
 #### Responses
@@ -369,7 +365,7 @@ createNewTask
 
 
 <a name="getalltasks"></a>
-### <font color=red> 获取所有任务列表</font>
+### 获取所有任务列表
 ```
 GET /tasks
 ```
@@ -397,9 +393,9 @@ GET /tasks
 
 
 <a name="updateconfingtask"></a>
-### <font color=red> 配置采集任务</font>
+### 配置采集任务
 ```
-PUT /tasks/config/{taskid}
+PUT /tasks/config/{taskname}
 ```
 
 
@@ -411,7 +407,7 @@ PUT /tasks/config/{taskid}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
 |**Body**|**body**  <br>*required*|创建类型|[ConfigTask](#configtask)|
 
 
@@ -435,9 +431,9 @@ PUT /tasks/config/{taskid}
 
 
 <a name="gettasklog"></a>
-### <font color=red> 获取任务采集日志(支持分页查询)</font>
+### 获取任务采集日志(支持分页查询)
 ```
-GET /tasks/log/{taskid}
+GET /tasks/log/{taskname}
 ```
 
 
@@ -450,7 +446,7 @@ GET /tasks/log/{taskid}
 |Type|Name|Description|Schema|
 |---|---|---|---|
 |**Header**|**X-Total-Count**  <br>*optional*|返回查询记录总数|integer (int32)|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
 |**Query**|**limit**  <br>*optional*|取多少条|integer (int32)|
 |**Query**|**offset**  <br>*optional*|偏移量|integer (int32)|
 
@@ -475,7 +471,7 @@ GET /tasks/log/{taskid}
 
 
 <a name="gettaskresult"></a>
-### <font color=red> 获取任务采集日志(支持分页查询)</font>
+### 获取任务采集日志(支持分页查询)
 ```
 GET /tasks/result/{taskid}
 ```
@@ -490,7 +486,7 @@ GET /tasks/result/{taskid}
 |Type|Name|Description|Schema|
 |---|---|---|---|
 |**Header**|**X-Total-Count**  <br>*optional*|返回查询记录综述|integer (int32)|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskid**  <br>*required*|任务名称|string (string)|
 |**Query**|**limit**  <br>*optional*|取多少条|integer (int32)|
 |**Query**|**offset**  <br>*optional*|偏移量|integer (int32)|
 
@@ -515,9 +511,9 @@ GET /tasks/result/{taskid}
 
 
 <a name="webhooktaskid"></a>
-### <font color=red> webhook,用于集成第三方采集回调数据</font>
+### webhook,用于集成第三方采集回调数据
 ```
-POST /tasks/{taskid}
+POST /tasks/{taskname}
 ```
 
 
@@ -529,7 +525,7 @@ POST /tasks/{taskid}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
 |**Body**|**body**  <br>*required*|采集结果数据|[SpiderData](#spiderdata)|
 
 
@@ -553,9 +549,9 @@ POST /tasks/{taskid}
 
 
 <a name="gettasktaskid"></a>
-### <font color=red> 获取任务信息/状态/采集量</font>
+### 获取任务信息/状态/采集量
 ```
-GET /tasks/{taskid}
+GET /tasks/{taskname}
 ```
 
 
@@ -567,7 +563,7 @@ GET /tasks/{taskid}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
 
 
 #### Responses
@@ -590,9 +586,9 @@ GET /tasks/{taskid}
 
 
 <a name="updatetaskid"></a>
-### <font color=red> 更新任务(启动/停止)任务</font>
+### 更新任务(启动/停止)任务
 ```
-PUT /tasks/{taskid}
+PUT /tasks/{taskname}
 ```
 
 
@@ -604,8 +600,8 @@ PUT /tasks/{taskid}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
-|**Query**|**force**  <br>*optional*|如果已启动就重启|integer (int32)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
+|**Body**|**body**  <br>*optional*|状态(stop\|start)|[TaskScheduler](#taskscheduler)|
 
 
 #### Responses
@@ -628,9 +624,9 @@ PUT /tasks/{taskid}
 
 
 <a name="deletebytaskid"></a>
-### <font color=red> 删除指定任务</font>
+### 删除指定任务
 ```
-DELETE /tasks/{taskid}
+DELETE /tasks/{taskname}
 ```
 
 
@@ -642,7 +638,7 @@ DELETE /tasks/{taskid}
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Path**|**taskid**  <br>*required*|任务id|string (string)|
+|**Path**|**taskname**  <br>*required*|任务名称|string (string)|
 
 
 #### Responses
@@ -678,7 +674,7 @@ DELETE /tasks/{taskid}
 |**option**  <br>*optional*|可选|enum (可选,设置历史才生效 2017-01-01~2017-02-02)|
 |**proxy**  <br>*optional*||string (string)|
 |**type**  <br>*optional*||enum (once, realtime, history)|
-|**urls**  <br>*optional*||< object > array|
+|**urls**  <br>*optional*||< string > array|
 
 
 <a name="spiderapp"></a>
@@ -690,8 +686,8 @@ DELETE /tasks/{taskid}
 |**description**  <br>*optional*|爬虫描述,支持md语法|string (string)|
 |**name**  <br>*optional*|爬虫名称,英文表示|string (string)|
 |**script**  <br>*optional*|爬虫脚本|string (string)|
-|**spiderName**  <br>*optional*|爬虫简称等|string (string)|
-|**type**  <br>*optional*|爬虫app类型|string (string)|
+|**simplename**  <br>*optional*|爬虫简称等|string (string)|
+|**type**  <br>*optional*|爬虫app类型, url\|query|string (string)|
 |**updatetime**  <br>*optional*|更新时间|string (date-time)|
 
 
@@ -700,7 +696,7 @@ DELETE /tasks/{taskid}
 
 |Name|Schema|
 |---|---|
-|**fields**  <br>*optional*|< object > array|
+|**fields**  <br>*optional*|< string > array|
 |**name**  <br>*optional*|string|
 |**timestamp**  <br>*optional*|string (date-time)|
 
@@ -721,6 +717,18 @@ DELETE /tasks/{taskid}
 |**name**  <br>*optional*|string|
 |**status**  <br>*optional*|enum (running, stop)|
 |**updatetime**  <br>*optional*|string|
+
+
+<a name="taskinfo"></a>
+### TaskInfo
+
+|Name|Description|Schema|
+|---|---|---|
+|**data**  <br>*optional*|采集任务|string|
+|**spidername**  <br>*optional*|爬虫app 名称|string|
+|**status**  <br>*optional*||enum (running, stop)|
+|**taskname**  <br>*optional*|任务名称|string|
+|**type**  <br>*optional*||enum (url, query)|
 
 
 <a name="tasklog"></a>
@@ -748,16 +756,25 @@ DELETE /tasks/{taskid}
 |**url**  <br>*optional*|string|
 
 
+<a name="taskscheduler"></a>
+### TaskScheduler
+
+|Name|Schema|
+|---|---|
+|**status**  <br>*optional*|string|
+
+
 <a name="taskstatus"></a>
 ### TaskStatus
 
 |Name|Description|Schema|
 |---|---|---|
-|**1d**  <br>*optional*|1天采集量|string|
-|**1d-failed**  <br>*optional*|1天采集失败量|string|
-|**1d-pending**  <br>*optional*|1天新增数量|string|
-|**1d-retry**  <br>*optional*|采集失败,重试数|string|
-|**1d-success**  <br>*optional*|采集成功数量|string|
+|**1d-pending**  <br>*optional*|1天采集量增量|string|
+|**1d-success**  <br>*optional*|1天成功采集量|string|
+|**1h-pending**  <br>*optional*|1小时采集增量|string|
+|**1h-success**  <br>*optional*|1小时成功采集量|string|
+|**5m-pending**  <br>*optional*|5分钟采集增量|string|
+|**5m-success**  <br>*optional*|5分钟成功采集量|string|
 |**name**  <br>*optional*||string|
 
 
