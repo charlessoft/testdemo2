@@ -27,7 +27,8 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
         >--help      Show this message and exit.
 
     >Commands:
-      getallspiderapp      获取所有spider app.  
+
+    >  getallspiderapp      获取所有spider app.  
       getalltasks          获取爬虫全部任务.  
       getspiderresult      获取爬虫采集结果.  
       getspidertaskstatus  获取爬虫任务状态.  
