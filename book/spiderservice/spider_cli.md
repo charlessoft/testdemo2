@@ -58,7 +58,7 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
 5. 创建爬虫任务
 
     ~~~
-    spidercli --url=http://115.28.208.122:5001 startspidertask  news_baidu news_baidu_demo  '["程序员的一天","helloworld"]' --type=search
+    spidercli --url=http://115.28.208.122:5001 runspidertask  news_baidu news_baidu_demo  '["程序员的一天","helloworld"]' --type=search
     ~~~
     返回结果:
 
