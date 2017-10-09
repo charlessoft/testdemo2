@@ -3,14 +3,25 @@ basin-spider cli 基于命令行方式,对basin-spider api封装.提供基本创
 
 ## 安装部署
 1. 下载源码
-2. python setup.py install
-使用命令
-spidercli --help
+地址: http://115.28.208.122:88/basin-spider/basin-spider-1.1.tar.gz
+2. 安装方式
+
+    ~~~
+    cd spidercli
+    pip install -r requirements.txt
+    python setup.py install
+    ~~~
+
+3. 使用帮助
+    
+    ~~~
+    spidercli --help
+    ~~~
 3. 获取spider app
 
-~~~
-spidercli --url=http://10.211.55.2:5001 getallspiderapp
-~~~
+    ~~~
+    spidercli --url=http://10.211.55.2:5001 getallspiderapp
+    ~~~
 
 返回结果:
 

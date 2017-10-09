@@ -24,43 +24,32 @@ basin-spdier和pyspider docker镜像发布与115.28.208.122上.
     修改ip地址,如下所示,如果是本机运行.可以修改127.0.0.1
     ![PNG](./images/spider_deploy_01.jpg)
 3. 执行启动爬虫服务,默认启动 redis, mongo, pyspider, basin-spider
-    >docker-compose up -d
+
+    ~~~
+    docker-compose up -d
+    ~~~
 4. 导入spider app工程,当前支持4个招标网站采集app,(南网,国网,政府招标,安徽招标)
 
     ~~~
-    mongorestore --host 127.0.0.1 --port 11081 --db spider ${PWD}/db/spider/spider
-    ~~~
-5. 启动指定spider app爬虫任务.以安徽招标为例,
-
-    ~~~
-    python 脚本:
-            url = "http://115.28.208.122:5000/api/v1/tasks"
-
-            playoud = {
-                "data": [
-                    {
-                        "url": "http://www.ahbc.com.cn/exclusive.aspx?type=qy",
-                        "extra": {
-                            "websiteName": "ahbc"
-                        }
-                    }
-                ],
-                "status": "RUNNING",
-                "spidername": "ahbc",
-                "taskname": 'firstdemo'
-            }
-
-            r = requests.post(url)
-            print r.status_code
-
+    !!需要指定目标 mongodb 地址和port
+     docker run --rm \
+                -v ${PWD}/db/spider/spider:/tmp/db/spider/spider \
+                mongo:3.0.15 \
+                mongorestore --host 115.28.208.122 --port 11081 --db spider /tmp/db/spider/spider
     ~~~
 
-    或者curl 命令:
+5. 安装spidercli 命令
 
     ~~~
-    curl -v -i -X POST -H "Content-type:application/json"  -d '{"status": "RUNNING", "spidername": "ahbc", "taskname": "firstdemo", "data": [{"url": "http://www.ahbc.com.cn/exclusive.aspx?type=qy", "extra": {"websiteName": "ahbc"}}]}' http://115.28.208.122:5001/api/v1/tasks
+    cd spidercli
+    pip install -r requirements.txt
+    python setup.py install
     ~~~
 
+6. 爬虫服务管理控制,可以使用spidercli命令行工具或者直接调用api 接口,相关连接
+  [spider_cli](./spider_cli.md)
+  [spider_api_调用](./spider_api_invoke.md)
+  
 6. 查看采集状态
     由于未做basin-spider监控界面,当前还是使用spider自带的监控.
     http://115.28.208.122:5000
