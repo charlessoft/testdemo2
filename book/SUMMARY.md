@@ -7,4 +7,5 @@
 * [爬虫服务](spiderservice/main.md)
    * [basin-spider 安装部署](spiderservice/spider_deploy.md)
    * [basin-spider 开放接口服务](spiderservice/spider_service.md)
+   * [basin-spider api 调用示例](spiderservice/spider_api_invoke.md)
 
