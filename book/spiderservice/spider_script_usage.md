@@ -5,11 +5,6 @@
 
   ~~~
 
-    !/usr/bin/env python
-    # -*- encoding: utf-8 -*-
-    # Created on 2017-10-16 16:36:15
-    # Project: demo
-    
     from pyspider.libs.base_handler import *
     from pyspider.libs.base_handler import *
     from udbswp.handler.basinarticle_handler import BasinArticleHandler as MyHandler
