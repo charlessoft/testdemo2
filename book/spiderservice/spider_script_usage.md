@@ -47,7 +47,7 @@
             return detail
     ~~~
     
-2. 基本示例代码 
+2. 基本示例代码 (以百度新闻为例)
 
     ~~~
     #!/usr/bin/env python
