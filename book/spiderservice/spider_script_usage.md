@@ -18,5 +18,8 @@
     from udbswp.utils import utils
     import time
     import re
+    class demo(MyHandler):
+        #!! 必须继承MyHandler,类名符合英文大小写字符即可.
+        crawl_config = {
+        }
     ~~~
-    
