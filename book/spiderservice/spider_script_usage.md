@@ -90,23 +90,26 @@
     + 框架类函数
 
         + **import_urls()**
+        
             """
             导入需要采集的url地址
             return: 数组列表(list)
             """
         
-        + import_extra()  
+        + **import_extra()**  
+        
             """
             导入扩展信息
             return: 数组列表(list)
             """
-        + get_root_list_page(html)  
+        + **get_root_list_page(html)**
+          
             """
             获取列表页
             html: 网页内容
             return: 数组列表(list)
             """
-        + get_detail_page(html,detail)  
+        + **get_detail_page(html,detail)**  
 
             """
             获取详细页
@@ -115,7 +118,7 @@
             return: 字典(dict)
             """
 
-        + get_next_page()  
+        + **get_next_page()**  
 
             """
             获取下一页(待实现)
@@ -123,7 +126,7 @@
         
     + 框架函数工具集
         基本函数:
-        + pquery()  
+        + **pquery()**  
 
             """
             封装pyquery类似jquery功能,采用css 选择器来获取数据, 可以根据css 样式,html元素选择标签
@@ -131,7 +134,7 @@
         
         高级函数:
         
-        + add_new_url(url,**kwrags) 
+        + **add_new_url(url,**kwrags)** 
         
             """
             爬取新的url地址
