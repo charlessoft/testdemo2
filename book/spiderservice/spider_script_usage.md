@@ -47,7 +47,7 @@
             return detail
     ~~~
     
-   2. 基本示例代码 
+2. 基本示例代码 
 
     ~~~
     #!/usr/bin/env python
@@ -86,10 +86,10 @@
     
     ~~~
 
-2. 框架函数说明
+3. 框架函数说明
     + 框架类函数
 
-        + import_urls()  
+        + **import_urls()**
             """
             导入需要采集的url地址
             return: 数组列表(list)
