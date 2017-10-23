@@ -72,23 +72,17 @@
         #1. 导入url
         def import_urls(self):
             return ['http://news.baidu.com/ns?word={}&sr=0&cl=2&rn=20&tn=news&ct=0&clk=sortbytime'.format("中国")]
-        
         #2. 导入扩展属性,用户数设置
         def import_extract(self):
             return {"website":"myspider"}
-        
-    
         #3. 获取采集列表页
         def get_root_list_page(self, html):
             for each in utils.pquery(html,".result > .c-title >a").items():
                 yield each.attr("href")
-                
-    
         #4. 获取详细页面
         def get_detail_page(self, html, detail):
             detail.update(self.get_extra())
             return detail
-         
     
     ~~~
 
