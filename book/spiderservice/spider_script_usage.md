@@ -5,7 +5,7 @@
 
 ~~~
 from ss import ss
-def aa():
+def #aa():
     print sss
 ~~~
 
