@@ -5,7 +5,7 @@
 
   ~~~
 
-    #!/usr/bin/env python
+    !/usr/bin/env python
     # -*- encoding: utf-8 -*-
     # Created on 2017-10-16 16:36:15
     # Project: demo
@@ -60,7 +60,7 @@
 
     ~~~
 
-    #!/usr/bin/env python
+    !/usr/bin/env python
     # -*- encoding: utf-8 -*-
     # Created on 2017-10-16 16:36:15
     # Project: aa
