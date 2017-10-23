@@ -53,7 +53,7 @@
     #!/usr/bin/env python
     # -*- encoding: utf-8 -*-
     # Created on 2017-10-16 16:36:15
-    # Project: aa
+    # Project: news_baidu_demo
     
     from pyspider.libs.base_handler import *
     from pyspider.libs.base_handler import *
