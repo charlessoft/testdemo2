@@ -22,19 +22,16 @@
         #!! 必须继承MyHandler,类名符合英文大小写字符即可.
         crawl_config = {
         }
-        
+
         #1. 导入url
         def import_urls(self):
             return ["http://news.baidu.com/ns?word=%E7%A8%8B%E5%BA%8F%E5%91%98"]
-        
         #2. 导入扩展属性,用户设置
         def import_extract(self):
             """
                 必须返回字典
             """
             return {"website":"myspider"}
-        
-    
         #3. 获取采集列表页
         def get_root_list_page(self, html):
             """
@@ -42,9 +39,6 @@
             """
             return ["http://news.baidu.com/ns?word=helloworld&pn=0",
             "http://news.baidu.com/ns?word=helloworld&pn=10"]
-
-                
-    
         #4. 获取详细页面
         def get_detail_page(self, html, detail):
             """
